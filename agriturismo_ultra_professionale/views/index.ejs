@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='it'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+<link rel='stylesheet' href='/style.css'>
+<title>Agriturismo Ultra Premium</title>
+</head>
+<body>
+<header>
+<h1>Agriturismo Ultra Premium</h1>
+<nav><a href='/shop'>Shop</a> | <a href='/login'>Admin</a></nav>
+</header>
+
+<section class='hero'>
+<h2>Tradizione Agricola Italiana</h2>
+<p>Produzione biologica e agriturismo di lusso.</p>
+</section>
+
+<section>
+<h2>Instagram</h2>
+<iframe src='https://www.instagram.com/instagram/embed' width='350' height='450'></iframe>
+</section>
+
+<section class='prodotti'>
+<h2>Prodotti in evidenza</h2>
+<% prodotti.forEach(p=>{ %>
+<div class='card'><h3><%=p.nome%></h3><p><%=p.prezzo%></p></div>
+<% }) %>
+</section>
+</body>
+</html>

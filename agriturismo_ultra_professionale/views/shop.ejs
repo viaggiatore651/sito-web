@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+<link rel='stylesheet' href='/style.css'>
+</head>
+<body>
+<h1>Negozio Agricolo</h1>
+<% prodotti.forEach(p=>{ %>
+<div class='card'>
+<h3><%=p.nome%></h3>
+<p><%=p.prezzo%></p>
+<form method='POST' action='/ordine'>
+<input name='prodotto' value='<%=p.nome%>' hidden>
+<input name='cliente' placeholder='Nome cliente'>
+<button>Ordina</button>
+</form>
+</div>
+<% }) %>
+</body>
+</html>

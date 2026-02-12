@@ -1,0 +1,12 @@
+<h1>Pannello Admin Ultra</h1>
+<h2>Aggiungi prodotto</h2>
+<form method='POST' action='/add-prodotto'>
+<input name='nome' placeholder='nome'>
+<input name='prezzo' placeholder='prezzo'>
+<button>Aggiungi</button>
+</form>
+
+<h2>Ordini ricevuti</h2>
+<% ordini.forEach(o=>{ %>
+<p><%=o.cliente%> - <%=o.prodotto%></p>
+<% }) %>
